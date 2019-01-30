@@ -97,7 +97,7 @@ final class InitializedContextEnvironment implements ContextEnvironment, Service
      */
     public function hasContextClass($class)
     {
-        return (bool) $this->resolveContextClass($class);
+        return $class ? (bool) $this->resolveContextClass($class) : false;
     }
 
     /**
